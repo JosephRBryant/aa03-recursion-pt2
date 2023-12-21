@@ -13,10 +13,28 @@ reverse(""); // ""
 ***********************************************************************/
 
 
+// function reverse(str) {
+//   if (str.length === 0) {
+//     return "";
+//   }
+
+//   return str[str.length - 1].concat(reverse(str.slice(0, -1)));
+// }
+
 function reverse(str) {
-  // Your code here 
+  if (str.length === 0) {
+    return "";
+  }
+
+  return reverse(str.slice(1)) + str[0];
 }
 
+console.log(reverse("house")); // "esuoh"
+reverse("dog"); // "god"
+reverse("atom"); // "mota"
+reverse("q"); // "q"
+reverse("id"); // "di"
+reverse(""); // ""
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
